@@ -7,8 +7,14 @@ class Skill(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
+    def __str__(self):
+        return self.description
+
 class UserSkill(models.Model):
     user = models.ForeignKey(User)
     skill = models.ForeignKey(Skill)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        return '%s: %s' % (self.user.username, self.skill.description)
