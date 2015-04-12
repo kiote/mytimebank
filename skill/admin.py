@@ -1,3 +1,7 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import Skill
+from .models import UserSkill
+
+admin.site.register(Skill)
+admin.site.register(UserSkill)

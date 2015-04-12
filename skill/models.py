@@ -7,7 +7,7 @@ class Skill(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
-class UserSkills(models.Model):
+class UserSkill(models.Model):
     user = models.ForeignKey(User)
     skill = models.ForeignKey(Skill)
     created_at = models.DateTimeField(auto_now_add=True)

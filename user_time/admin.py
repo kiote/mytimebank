@@ -1,3 +1,6 @@
 from django.contrib import admin
+from .models import UserTime
+from .models import UserTimeChange
 
-# Register your models here.
+admin.site.register(UserTime)
+admin.site.register(UserTimeChange)
